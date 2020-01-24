@@ -1,10 +1,10 @@
-package main
+package hannuo
 
 import(
 	"fmt"
 )
 
-func moveHannuo(count byte){
+func MoveHannuo(count byte){
 	moveAction("A", "B", "C", count);
 }
 

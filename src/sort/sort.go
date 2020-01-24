@@ -1,10 +1,10 @@
-package main
+package sort
 
 import(
 	"fmt"
 )
 
-func sort(arr []int){
+func Sort(arr []int){
 	fmt.Println("before sort:%a", arr)
 	for i:=1; i < len(arr); i++ {
 		var ta = arr[0:i+1];
