@@ -11,6 +11,11 @@ type Monitor struct {
 	h int
 }
 
+func NewMonitor() *Monitor {
+	m := Monitor{}
+	return &m
+}
+
 func (m *Monitor) GetMonitorInfo() {
 	fmt.Println("x :", m.x, ", y :", m.y, ", width :", m.w, ", height :", m.h)
 }

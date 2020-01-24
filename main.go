@@ -5,13 +5,8 @@ import(
 	 "structtest"
 )
 
-func main(){
-	monitor := structtest.Monitor{
-		0,
-		0,
-		0,
-		0,
-	}
+func main() {
+	m := structtest.NewMonitor()
 
-	monitor.GetMonitorInfo()
+	m.GetMonitorInfo()
 }
