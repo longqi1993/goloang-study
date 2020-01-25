@@ -5,7 +5,7 @@ TARGET=demo.a
 GOPATH_DIR=/home/orcno/goloang-study
 GCC=go
 GBUILD=$(GCC) build -v
-MODULE:=hannuo sort runetest slice structtest
+MODULE:=hannuo sort runetest slice structtest gutils 
 
 .PHONY:all clean install
 

@@ -2,11 +2,17 @@ package main
 
 import(
 	 _ "fmt"
-	 "structtest"
+	 "gutils"
 )
 
 func main() {
-	m := structtest.NewMonitor()
+	tt := gutils.NewTree(".")
 
-	m.GetMonitorInfo()
+	tn := gutils.TreeRoot(tt)
+	_ = tn.AddChild("t1")
+	tn2 := tn.AddChild("t2")
+	tn2.AddChild("ts1")
+	tn2.AddChild("ts2")
+
+	gutils.PrintTree(tt)
 }
