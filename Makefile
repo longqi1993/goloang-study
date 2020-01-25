@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TARGET=demo.a
+TARGET=ftree
 
 GOPATH_DIR=/home/orcno/goloang-study
 GCC=go
@@ -28,4 +28,4 @@ install:
 clean:
 	rm -f $(addsuffix .o,${MODULE})
 	rm -f ${TARGET}
-
+	rm -f *.o *.a
