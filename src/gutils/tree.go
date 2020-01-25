@@ -49,9 +49,7 @@ func (tn *TreeNode) printChild(ps []rune) {
 		}
 		fmt.Printf(string(v._d))
 		fmt.Println()
-		if len(v._c) > 1 {
-			v.printChild(tps)
-		}
+		v.printChild(tps)
 	}
 }
 
