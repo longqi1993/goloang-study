@@ -22,18 +22,18 @@ const (
 	eline = "    "
 )
 
-func (tn *TreeNode) findChild(d string) bool {
+func (tn *TreeNode) FindChild(d string) *TreeNode {
 	if (tn == nil) {
-		return false
+		return nil
 	}
 
 	for _, v := range tn._c {
 		if string(v._d) == d {
-			return true;
+			return v;
 		}
 	}
 
-	return false
+	return nil 
 }
 
 func (tn *TreeNode) printChild(ps []rune) {
@@ -73,6 +73,11 @@ func (tn *TreeNode) PrintNode() {
 }
 
 func (tn *TreeNode) AddChild (d string) *TreeNode {
+	tc := tn.FindChild(d)
+	if tc != nil {
+		return tc
+	}
+
 	tnode := &TreeNode{_p:tn, _c:nil, _d:[]rune(d)}
 	tn._c = append(tn._c, tnode)
 	return tnode
